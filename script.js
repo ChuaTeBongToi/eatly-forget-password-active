@@ -1,12 +1,38 @@
-const goToNextInput = () => {
-    for(const [i, inputElement] of inputsList.entries()) {
-       if (inputElement.value.length === 1 && i !== 5) {
-         removeDisabledAttribute(inputsList[i+1]);
-         inputsList[i+1].focus();
-        }
-       if (inputElement.value.length === 1 && i === 5) {
-         inputElement.parentElement.nextElementSibling.focus();
-         areAllFilled(inputsList) ? setDisabledAttributeForAll(inputsList) : '';
-       }
+var elts = document.getElementsByClassName('otp')
+Array.from(elts).forEach(function(elt){
+  elt.addEventListener("keyup", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (elt.value.length == 1) {
+      // Focus on the next sibling
+      elt.nextElementSibling.focus()
     }
-  }
+  });
+})
+
+function startTimer(){
+  var seconds = 0,
+      minutes = 1;
+  setInterval(function() {
+    seconds--;
+    if (seconds >= 0) {
+      p = document.getElementById("count");
+      p.innerHTML = seconds;
+    }
+
+    if (seconds == -1 && minutes == 0) {
+        alert('sorry, out of time');
+        clearInterval(seconds);
+    }
+    else if (seconds == -1) {
+      minutes--;
+      p = document.getElementById("minutes");
+      p.innerHTML = minutes;
+      seconds = 60;
+    }
+  }, 1000);
+}
+function start()
+{
+    document.getElementById("count");
+    startTimer();
+};

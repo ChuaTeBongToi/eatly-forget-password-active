@@ -114,8 +114,7 @@ input {
     cursor: pointer;
     will-change: border;
     transition: border .3s ease-in-out;
-    -webkit-appearance: none;
-    -moz-appearance: textfield;
+
 }
 
 input[type=text]::-webkit-inner-spin-button,
@@ -144,15 +143,14 @@ input:last-child {
     all: none;
     all: unset;
     all: initial;
+    display: flex;
     text-align: left;
     margin-top: 20px;
     margin-right: 300px;
 }
 
-.countdown {
-    all: none;
-    all: unset;
-    all: initial;
+.count-text {
+    margin-right: 2px;
     color: #6C5FBC;
     font-size: 21.447px;
     font-family: Poppins;

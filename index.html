@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Eatly</title>
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Manrope:wght@500&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -47,15 +49,18 @@
         <h1 class="verify-email-title">Verify Email</h1>
         <p class="small-title">Code Send To Your Email</p>
         <div class="otp-input">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
-            <input type="text" maxlength="1">
+            <input type="text" class="otp" maxlength="1">
+            <input type="text" class="otp" maxlength="1">
+            <input type="text" class="otp" maxlength="1">
+            <input type="text" class="otp" maxlength="1">
+            <script src="script.js"></script>
         </div>
         <div class="countdown-div">
-            <p class="countdown">(3:59)</p>
+            <p class="count-text">(</p> <p class="count-text" id="minutes">1</p> <p class="count-text">:</p>
+            <p class="count-text" id="count">00</p>
+            <p class="count-text">)</p>
         </div>
-        <button class="btn">Verify</button>
+        <button class="btn" onclick="start()">Verify</button>
     </section>
 </body>
 
