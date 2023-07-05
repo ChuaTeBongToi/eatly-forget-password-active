@@ -61,3 +61,5 @@ function start() {
   document.getElementById("count");
   startTimer();
 };
+
+window.onload = startTimer();
