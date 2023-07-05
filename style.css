@@ -160,6 +160,10 @@ input:last-child {
     letter-spacing: 0.429px;
 }
 
+#sent-again {
+    cursor: pointer;
+}
+
 .btn {
     cursor: pointer;
     color: #F3F5F6;
